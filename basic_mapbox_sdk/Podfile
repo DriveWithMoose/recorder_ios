@@ -1,0 +1,30 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '12.0'
+
+target 'basic_mapbox_sdk' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for basic_mapbox_sdk
+
+  pod 'MapboxVisionNativeAll', :podspec => 'https://api.mapbox.com/downloads/v1/vision/ios/mapbox-vision-native-all/0.14.0.podspec?access_token=sk.eyJ1IjoiaG9ncHViIiwiYSI6ImNrcWZ2dTV3dTA4YWIydW51N3ZpaHh6NWQifQ.fRHem82eoZfXhC1x5mlG7g'
+ 
+  # Vision only
+  pod "MapboxVision", :git => 'https://github.com/mapbox/mapbox-vision-ios.git', :tag => 'v0.14.0'
+ 
+  # AR
+  pod "MapboxVisionAR", :git => 'https://github.com/mapbox/mapbox-vision-ios.git', :tag => 'v0.14.0'
+ 
+  # Safety
+  pod "MapboxVisionSafety", :git => 'https://github.com/mapbox/mapbox-vision-ios.git', :tag => 'v0.14.0'
+
+  target 'basic_mapbox_sdkTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'basic_mapbox_sdkUITests' do
+    # Pods for testing
+  end
+
+end
